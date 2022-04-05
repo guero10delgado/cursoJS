@@ -109,8 +109,9 @@ console.log(b);
 
 
 
-
-//CONDICIONALES
+/*************************************
+            CONDICIONALES
+**************************************/
 
 if(true){
    console.log('Hola mundo!!');
@@ -143,8 +144,10 @@ if(numero_2 == 4){
 }
 
 
+/*************************************
+         OPERADORES RELACIONALES
+**************************************/
 
-// OPERADORES RACIONALES
 
 let numero_3 = 3;
 
@@ -169,8 +172,9 @@ if('5' === '5'){
 }
 
 
-
-//OPERADORES LOGICOS
+/*************************************
+         OPERADORES LOGICOS
+**************************************/
 
 // or (||) 
 let color = 'Verde';
@@ -192,7 +196,10 @@ if(numero_4 >= 10 && numero_4 <= 20){
 console.log( !(4 == 4) );
 
 
-// OPERADORES MATEMATICOS
+/*************************************
+         OPERADORES MATEMATICOS
+**************************************/
+
 
 let num1 = 25;
 let num2 = 10;
@@ -211,8 +218,9 @@ resul = num1 / num2;
 console.log(resul);
 
 
-
-// CICLOS
+/*************************************
+               CICLOS
+**************************************/
 
 console.log('Hola mundo!!');
 console.log('Hola mundo!!');
@@ -236,8 +244,9 @@ for(let x = 0; x < 50; x++){
  }
 
 
-
-// ARRAYS
+/*************************************
+               ARRAYS
+**************************************/
 
 let nombres = ['NombreA','NombreB','NombreC'];
 
@@ -263,8 +272,9 @@ for(let x = 0; x < nombres.length; x++){
 }
 
 
-
-// FUNCIONES
+/*************************************
+               FUNCIONES
+**************************************/
 
 /*
    function nombre_funcion(parametros){
@@ -301,4 +311,105 @@ function square(number){
 }
 
 console.log( square(5) );
+
+
+/*************************************
+               EVENTOS
+**************************************/
+
+
+function load(){
+   console.log('La pagina esta totalmente cargada');
+}
+
+function show(){
+   alert('Di click!!');
+}
+
+function showBlur(){
+   let name = document.getElementById('name');
+   alert(name.value);
+}
+
+function getModelo(){
+   let modelo = document.getElementById('mySelect');
+   document.getElementById('consola').innerHTML = 'Seleccionaste el modelo: ' + modelo.value;
+}
+
+function setColor(p, color){
+   p.style.color = color;
+}
+
+
+
+/*************************************
+            Objetos JSON
+**************************************/
+
+
+// JSON stringify
+
+let coche = {
+   modelo: 'Mazda',
+   anioFabricacion: 2020,
+   motor: 'Gasolina'
+}
+
+let cadena = JSON.stringify(coche);
+
+console.log('Cadena', cadena);
+
+
+// JSON Parse
+let objeto = JSON.parse('{"modelo":"Mazda","anioFabricacion":2020,"motor":"Gasolina"}');
+console.log('Objeto', objeto);
+
+
+/*************************************
+            Colleciones
+**************************************/
+
+let map = new Map();
+
+map.set('id', 1); // Almacena el valor con su clave
+map.set('modelo', 'Mazda');
+
+//Devuelve el valor de la clave
+let id = map.get('modelo');
+
+//Devuvelve true o false si existe en el Map
+let band = map.has('id');
+
+//Eliminar un elemento del Map
+map.delete('modelo');
+
+//elimina todo el Map
+map.clear();
+
+let tamano = map.size;
+
+console.log(tamano);
+
+
+// Iteracciones sobre Map
+
+let ingredientes = new Map(
+   [
+      ['pepino', 500],
+      ['tomate', 350],
+      ['cebolla', 50]
+   ]
+);
+
+for( let v of ingredientes.keys()){
+   console.log(v);
+}
+
+for( let v of ingredientes.values()){
+   console.log(v);
+}
+
+for( let entry of ingredientes){
+   console.log(entry);
+}
 
