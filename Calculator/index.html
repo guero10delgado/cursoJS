@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>Calculadora en JS</title>
+   <link type="text/css" href="style.css" rel="stylesheet">
+</head>
+
+<body onload="init()">
+
+   <table class="calculadora">
+      <tr>
+         <td colspan="4"><span id="resultado"></span></td>
+      </tr>
+
+      <tr>
+         <td colspan="4"><span id="operador"></span></td>
+      </tr>
+
+      <tr>
+         <td><button onclick="setNumber(7)">7</button></td>
+         <td><button onclick="setNumber(8)">8</button></td>
+         <td><button onclick="setNumber(9)">9</button></td>
+         <td><button onclick="setOperador('/')">/</button></td>
+      </tr>
+
+      <tr>
+         <td><button onclick="setNumber(4)">4</button></td>
+         <td><button onclick="setNumber(5)">5</button></td>
+         <td><button onclick="setNumber(6)">6</button></td>
+         <td><button onclick="setOperador('*')">*</button></td>
+      </tr>
+
+      <tr>
+         <td><button onclick="setNumber(1)">1</button></td>
+         <td><button onclick="setNumber(2)">2</button></td>
+         <td><button onclick="setNumber(3)">3</button></td>
+         <td><button onclick="setOperador('-')">-</button></td>
+      </tr>
+
+      <tr>
+         <td><button onclick="setNumber(0)">0</button></td>
+         <td><button onclick="resolver()">=</button></td>
+         <td><button onclick="resetear()">C</button></td>
+         <td><button onclick="setOperador('+')">+</button></td>
+      </tr>
+
+   </table>
+
+</body>
+
+<script src="index.js"></script>
+</html>
